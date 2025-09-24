@@ -20,7 +20,7 @@ import Ridephonepay from './assets/components/Ridephonepay.jsx';
 import RideForm from './assets/components/RideForm.jsx';
 import UserComponent from './assets/components/UserComponent.jsx';
 import RideDetailsCard from './assets/components/RideDetailsCard.jsx';
-import Signup from './assets/components/signup.jsx';
+// import Signup from './assets/components/signup.jsx';
 import Login from './assets/components/Login.jsx';
 
 
