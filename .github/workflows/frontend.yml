@@ -18,29 +18,21 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
-
-      # Cache Node modules
-      # Cache Node modules for faster builds
-      - name: Cache Node modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
+          node-version: 20   # Vite requires Node 20+
 
       # Install dependencies
       - name: Install dependencies
         run: npm ci
+        working-directory: ./products
 
-      # Build the Vite frontend
+      # Build Vite frontend
       - name: Build Vite frontend
         run: npm run build
+        working-directory: ./products
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: npm run deploy
+        working-directory: ./products
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
