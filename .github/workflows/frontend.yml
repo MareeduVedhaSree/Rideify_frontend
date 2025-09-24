@@ -25,23 +25,20 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('products/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
       # Install dependencies
       - name: Install dependencies
         run: npm ci
-        working-directory: ./products
 
       # Build the Vite frontend
       - name: Build Vite frontend
         run: npm run build
-        working-directory: ./products
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: npm run deploy
-        working-directory: ./products
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
