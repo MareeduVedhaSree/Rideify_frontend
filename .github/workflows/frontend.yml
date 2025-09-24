@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 20
 
-      # Cache Node modules for faster builds
+      # Cache Node modules
       - name: Cache Node modules
         uses: actions/cache@v3
         with:
