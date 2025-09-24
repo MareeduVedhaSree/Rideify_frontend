@@ -21,7 +21,7 @@ import RideForm from './assets/components/RideForm.jsx';
 import UserComponent from './assets/components/UserComponent.jsx';
 import RideDetailsCard from './assets/components/RideDetailsCard.jsx';
 // import Signup from './assets/components/signup.jsx';
-import Login from './assets/components/Login.jsx';
+// import Login from './assets/components/Login.jsx';
 
 
 
@@ -37,7 +37,7 @@ function App() {
         {/* <Route path="/signup" element={<Ridesignup />} />
         <Route path="/login" element={<Ridelogin />} /> */}
            {/* <Route path="/signup" element={<Signup />} /> */}
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} /> */}
                 <Route path="/ride" element={<Ride />} />
         <Route path="/ridebook" element={<Ridebook />} />
         <Route path="/ChooseAction" element={<ChooseAction />} />
